@@ -1,13 +1,13 @@
 # On every push this script is executed
+name: Gatsby Publish
+
 on: push
 name: Build and deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: Gatsby Publish
-        uses: enriikke/gatsby-gh-pages-action@v2.2.0
+      - uses: actions/checkout@v2
+      - uses: enriikke/gatsby-gh-pages-action@v2.2.0
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
