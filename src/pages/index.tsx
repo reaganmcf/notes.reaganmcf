@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react"
 
-import NavBar from './../components/NavBar';
+import NavBar from "./../components/NavBar"
 
 import "./../styles/index.scss"
 const Home: React.FC = () => {
-  return (<div className="relative min-h-screen flex">
-    <NavBar />
-  </div>);
+  return (
+    <div className="relative min-h-screen flex">
+      <NavBar />
+    </div>
+  )
 }
 
-export default Home;
+export default Home

@@ -8,7 +8,7 @@ interface PageHeaderProps {
 const PageHeader: React.FC<PageHeaderProps> = ({ title, date }) => {
   return (
     <div className="w-full bg-black">
-      <p>{title}</p>
+      <p className="text-xs">{title}</p>
       <p>{date}</p>
     </div>
   );

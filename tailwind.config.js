@@ -3,16 +3,16 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      transparent: 'transparent',
-      black: '#000',
-      white: '#fff',
-      blue: "#25283D",
-      "light-blue": "#98DFEA",
+      transparent: "transparent",
+      black: "#000",
+      white: "#fff",
+      "gray-light": "#F9FBFC",
+      "gray-dark": "#E5E6E9",
     },
     fontFamily: {
-      sans: ["Nunito"]
-    }
+      sans: ["Nunito"],
+    },
   },
 
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require("@tailwindcss/typography")],
 }

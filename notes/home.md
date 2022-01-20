@@ -1,5 +1,5 @@
 ---
-slug: "/notes/my-first-post"
+slug: "/home"
 date: "2021-01-17"
 title: "Home"
 ---

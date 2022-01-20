@@ -11,6 +11,7 @@ module.exports = {
   /* Your site config here */
   pathPrefix: "/notes.reaganmcf",
   plugins: [
+    'gatsby-plugin-graphql-codegen',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -27,6 +28,14 @@ module.exports = {
         path: `${__dirname}/notes`,
       }
     },
-    'gatsby-transformer-remark'
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-smartypants',
+          'gatsby-remark-prismjs'
+        ]
+      }
+    }
   ],
 }
