@@ -1,6 +1,9 @@
 # On every push this script is executed
 name: Gatsby Publish
 
+env:
+  NODE_ENV: production
+
 on: push
 jobs:
   build:
