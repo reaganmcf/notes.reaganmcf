@@ -1,5 +1,5 @@
 ---
-slug: "/food-farm-to-table/intro"
+slug: "/food-farm-to-table/lecture3"
 date: "2021-01-25"
 title: "Foods - Lecture 3"
 ---
