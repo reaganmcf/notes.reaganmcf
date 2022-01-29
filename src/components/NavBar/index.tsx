@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GetMarkdownFilesQuery } from "./../../../graphql-types"
 import TreeView from "react-treeview"
 import { DirTree, isFile, TreeNode } from "./DirTree"
+import TwitterLogo from "./../../assets/twitter.svg"
 
 import "./../../styles/treeview.scss"
 import "./../../styles/index.scss"
@@ -12,6 +13,7 @@ const NavBar: React.FC<NavBarProps> = () => {
   const allFiles = useStaticQuery<GetMarkdownFilesQuery>(query)
     .allMarkdownRemark.edges.map(item => item.node.frontmatter)
     .filter(item => item.slug && item.title)
+    .filter(item => item.slug != "/")
 
   const dirTree = new DirTree()
   allFiles.map(file =>
@@ -29,20 +31,21 @@ const NavBar: React.FC<NavBarProps> = () => {
           ? `/notes.reaganmcf/${slug}`
           : slug
       return (
-        <div>
+        <div className="ml-4">
           <a key={slug} href={path}>
             {title}
           </a>
         </div>
       )
     } else {
+      let prettyName = node.getName().replace(/\-/g, " ")
       return (
         <TreeView
           treeViewClassName=""
           itemClassName="font-bold text-lg"
           key={node.getName()}
           children={node.children.map(innerChild => buildTree(innerChild))}
-          nodeLabel={node.getName()}
+          nodeLabel={prettyName}
         />
       )
     }
@@ -51,14 +54,25 @@ const NavBar: React.FC<NavBarProps> = () => {
   return (
     <div className="bg-gray-light h-screen border-r-2 border-r-gray-dark">
       <div className="bg-white w-full pl-4 pt-10 pb-4 items-center shadow">
-        <p className="font-bold text-4xl">📝 Notes</p>
+        <a
+          href={
+            process.env.NODE_ENV === "production" ? "/notes.reaganmcf/" : "/"
+          }
+        >
+          <p className="font-bold text-4xl">📝 Notes</p>
+        </a>
 
-        <div className="text-gray-dark text-sm mt-4">
-          <p>@reaganmcf_</p>
+        <div className="text-[#888888] text-sm mt-4 flex items-center">
+          <img className="flex-none" src={TwitterLogo} />
+          <p className="flex-grow ml-4">@reaganmcf_</p>
         </div>
       </div>
 
-      <div className="px-4 py-6">{buildTree(dirTree.root)}</div>
+      <div className="px-4 py-6">
+        <div className="ml-4"></div>
+
+        {dirTree.root.children.map(child => buildTree(child))}
+      </div>
     </div>
   )
 }

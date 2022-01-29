@@ -13,7 +13,10 @@ export default function NoteTemplate({ data }) {
     <div className="min-h-screen flex">
       <NavBar />
 
-      <div className="flex-1 h-screen overflow-y-scroll" ref={containerRef}>
+      <div
+        className="flex-1 h-screen overflow-y-scroll pb-20"
+        ref={containerRef}
+      >
         <HeaderBar {...frontmatter} />
         <article
           className="prose prose-lg mx-auto mt-8"
