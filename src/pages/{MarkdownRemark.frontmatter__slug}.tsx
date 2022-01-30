@@ -3,6 +3,7 @@ import NavBar from "./../components/NavBar"
 import HeaderBar from "./../components/HeaderBar"
 import { graphql } from "gatsby"
 
+import "./../styles/index.scss"
 export default function NoteTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
