@@ -26,13 +26,9 @@ const NavBar: React.FC<NavBarProps> = () => {
   const buildTree = (node: TreeNode): any => {
     if (isFile(node.value)) {
       let { slug, title } = node.value
-      let path =
-        process.env.NODE_ENV === "production"
-          ? `/notes.reaganmcf/${slug}`
-          : slug
       return (
         <div className="ml-4">
-          <a key={slug} href={path}>
+          <a key={slug} href={slug}>
             {title}
           </a>
         </div>
@@ -54,11 +50,7 @@ const NavBar: React.FC<NavBarProps> = () => {
   return (
     <div className="bg-gray-light h-screen border-r-2 border-r-gray-dark">
       <div className="bg-white w-full pl-4 pt-10 pb-4 items-center shadow">
-        <a
-          href={
-            process.env.NODE_ENV === "production" ? "/notes.reaganmcf/" : "/"
-          }
-        >
+        <a href={"/"}>
           <p className="font-bold text-4xl">📝 Notes</p>
         </a>
 
