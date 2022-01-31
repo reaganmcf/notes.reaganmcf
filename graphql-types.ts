@@ -245,8 +245,8 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  pathPrefix?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
+  pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
@@ -540,8 +540,8 @@ export type QuerySiteArgs = {
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
-  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
+  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
@@ -1487,8 +1487,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___description'
   | 'port'
   | 'host'
-  | 'pathPrefix'
   | 'polyfill'
+  | 'pathPrefix'
   | 'jsxRuntime'
   | 'id'
   | 'parent___id'
@@ -1623,8 +1623,8 @@ export type SiteFilterInput = {
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
-  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
+  pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
   id?: InputMaybe<StringQueryOperatorInput>;
   parent?: InputMaybe<NodeFilterInput>;
