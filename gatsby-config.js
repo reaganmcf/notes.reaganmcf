@@ -8,8 +8,6 @@ module.exports = {
   siteMetadata: {
     title: "notes.reaganmcf"
   },
-  /* Your site config here */
-  pathPrefix: "/notes.reaganmcf",
   plugins: [
     'gatsby-plugin-graphql-codegen',
     {
