@@ -6,7 +6,7 @@ title: "Compilers - Lecture 3"
 
 # Lecture 3
 
-## Instructin Scheduling (Engineer's View)
+## Instruction Scheduling (Engineer's View)
 
 The Problem:
 
