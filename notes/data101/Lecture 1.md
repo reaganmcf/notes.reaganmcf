@@ -28,7 +28,7 @@ title: "Data 101 - Plots"
 - Look what I found - can't wait to show you...
   - Salaries do not depend on education?
   - Salaries clearly are postively correlated with education
-  - IF groom and bride are born under the same sign THEN marriage has much higher chance to survive
+  - If groom and bride are born under the same sign THEN marriage has much higher chance to survive
 
 #### Interesting vs Actionable?
 
