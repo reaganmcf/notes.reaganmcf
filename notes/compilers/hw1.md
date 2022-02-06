@@ -91,3 +91,69 @@ One of the most clear advantages of removing anti-dependencies is that it remove
 One clear disadvantage of removing anti-dependencies is the increased demand for registers. Renaming registers to remove anti-dependencies increase the demand for registers, potentially forcing the register allocator to spill more values. Spilling these values into memory can cause very (relatively) long latency operations by having to access the memory when there are more named registers than actual registers on that particular architecture.
 
 ## Problem 3 - Instruction Scheduling
+
+```
+a   loadI 1024  => r0
+b   loadI 0 =>r1
+c   storeAI r1  => r0, 0
+d   loadI 63  => r3
+e   storeAI r3  => r0, 4
+f   loadI 5 =>r5
+g   loadAI r0, 0  => r6
+h   add r5,r6 =>r7
+i   storeAI r7  => r0, 8
+j   loadAI r0, 8  => r3
+k   loadI 9  => r10
+l   sub r3, r10  => r11
+m   storeAI r11  => r0, 12
+n   loadAI r0, 4  => r13
+o   loadI 3  => r14
+p   mult r13, r14  => r15
+q   storeAI r15  => r0, 16
+r   loadAI r0, 16  => r3
+s   loadI 7  => r18
+t   mult r3, r18  => r4
+u   storeAI r4  => r0, 20
+v   loadAI r0, 12  => r21
+w   loadAI r0, 20  => r22
+x   add r21, r22  => r23
+y   storeAI r23  => r0, 24
+z   loadAI r0, 24  => r25
+aa  storeAI r25  => r0, 28
+bb  outputAI r0, 28
+```
+
+#### 1. Show the assignment S(n) of instruction issue times to instructions when no list scheduling is performed. How many cycles does the program take?
+
+Assuming we can pipeline instructions:
+
+- a = S(0)
+- b = S(1)
+- c = S(2) (r1 and @0 can't be used until S(5))
+- d = S(3)
+- e = S(4) (r3 and @4 can't be used until S(7))
+- f = S(5)
+- g = S(6) (r6 can't be used until S(9))
+- h = S(9)
+- i = S(10) (r7 and @8 can't be used until S(13))
+- j = S(13) (r3 and @8 can't be used until S(16))
+- k = S(14)
+- l = S(16) (assuming sub is 1 cycle)
+- m = S(17) (r11 and @12 can't be used until S(20))
+- n = S(18) (@4 and r13 can't be used until S(21))
+- o = S(19)
+- p = S(21) (r15 can't be used until S(23))
+- q = S(23) (r15 and @16 can't be used until S(26))
+- r = S(26) (@16 and r3 can't be used until S(29))
+- s = S(27)
+- t = S(29) (r4 can't be used until S(31))
+- u = S(31) (r4 and @20 can't be used until S(34))
+- v = S(32) (r21 and @12 can't be used until S(35))
+- w = S(34) (r22 and @20 can't be used until S(37))
+- x = S(37)
+- y = S(38) (r23 and @24 can't be used until S(41))
+- z = S(41) (r25 and @24 can't be used until S(44))
+- aa = S(44) (@28 can't be used until S(47))
+- bb = S(47)
+
+The program takes a total of 48 cycles (since outputAI is scheduled on the 47th cycle and takes 1 cycle to finish)
