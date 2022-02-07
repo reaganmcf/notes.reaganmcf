@@ -157,3 +157,9 @@ Assuming we can pipeline instructions:
 - bb = S(47)
 
 The program takes a total of 48 cycles (since outputAI is scheduled on the 47th cycle and takes 1 cycle to finish)
+
+#### 2. Show the dependency graph for the basic block
+
+<p align="center">
+  <img src="./3.2.png" />
+</p>
