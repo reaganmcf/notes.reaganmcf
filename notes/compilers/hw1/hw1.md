@@ -163,3 +163,11 @@ The program takes a total of 48 cycles (since outputAI is scheduled on the 47th 
 <p align="center">
   <img src="./3.2.png" />
 </p>
+
+#### 3. Label the nodes in the dependency graph based on the longest latency-weighted path.
+
+<p align="center">
+  <img src="./3.3.png" />
+</p>
+
+#### 4. Show the result of forward list scheduling, i.e., S(n) using the longest latency weighted path heuristic. How many cycles does the program take
