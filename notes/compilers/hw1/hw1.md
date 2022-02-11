@@ -1,29 +1,182 @@
 # Assignment 1
 
+Compilers - CS415 - 02/11/2022
+
+Reagan McFarland
+
+NETID - rpm141
+
 ## Problem 1 - ILOC code shape
+
+Original code:
+
+```go
+a := 2;
+b := 3;
+c := a + b;
+d := a * b + a * c;
+d := a + c + d;
+PRINT d;
+```
 
 #### 1. All variables may be aliased
 
-```
-code
+Since all variables may be aliased, we have to make sure to commit changes to memory and load them before making operations
+
+```pascal
+loadI 1024 => r0
+
+// a = 2
+loadI 2 => r1
+storeAI r1 => r0,4
+
+// b = 3
+loadI 3 => r2
+storeAI r2 => r0,8
+
+// c = a + b
+loadAI r0,4 => r1
+loadAI r0,8 => r2
+add r1,r2 => r3
+storeAI r3 => r0,12
+
+// a * b
+loadAI r0,4 => r1
+loadAI r0,8 => r2
+mult r1,r2 => r3
+
+// a * c
+mult r1,r4 => r4
+
+// d = a * b + a * c
+add r3,r4 => r5
+storeAI r5 => r0,16
+
+// d = a + c + d
+loadAI r0,4 => r1
+loadAI r0,12 => r3
+add r1, r3 => r4
+add r4, r5 => r6
+
+storeAI r6 => r0, 20
+outputAI r0, 20
 ```
 
 #### 2. Variables a and b, and c and d may be aliased. However, both a and b are not aliased with c or d. Memory consistency has to be preserved.
 
-```
-code
+We only have to make sure to commit changes to memory and load them before making operations involving a and b, and c and d.
+
+```pascal
+loadI 1024 => r0
+
+// a = 2
+loadI 2 => r1
+storeAI r1 => r0,4
+
+// b = 3
+loadI 3 => r2
+storeAI r2 => r0,8
+
+// c = a + b
+// have to re load a since b can be aliased with it
+loadAI r0,4 => r1
+add r1,r2 => r3
+storeAI r3 => r0,12
+
+// a * b
+// no need to load a or b again, since c cant be aliased with them
+mult r1,r2 => r4
+
+// a * c
+mult r1, r3 => r5
+
+// d = a * b + a * c
+add r4, r5 => r5
+storeAI r5 => r0, 16
+
+// d = a + c + d
+// have to re load c, since d can be aliased with it
+loadAI r0, 12 => r3
+add r1, r3 => r3 // a + c
+add r3, r5 => r5
+storeAI r5 => r0,16
+
+outputAI r0, 16
 ```
 
 #### 3. No two variables are aliased. Memory consistency has to be preserved
 
+With no variables able to be aliased, we don't have to load after stores. However, we do have to store to keep memory consistency
+
 ```
-code
+loadI 1024 => r0
+
+// a = 2
+loadI 2 => r1
+storeAI r1 => r0,4
+
+// b = 3
+loadI 3 => r2
+storeAI r2 => r0,8
+
+// c = a + b
+// no variables are aliased, no need to re load
+add r1, r2 => r3
+storeAI r3 => r0,12
+
+// a * b
+mult r1,r2 => r4
+
+// a * c
+mult r1,r3 => r5
+
+// d = a * b + a * c
+add r4, r5 => r6
+storeAI r6 => r0, 16
+
+// d = a + c + d
+add r1, r3 => r7
+add r6, r7 => r6
+storeAI r6 => r0, 16
+
+outputAI r0, 16
 ```
 
 #### 4. No two variables are aliased. Memory consistency may not be preserved
 
+With no variables able to be aliased, we don't have to load after stores. Also, since memory consistency does not have to be preserved, we can do all of our storeAI's at the end of the block.
+
 ```
-code
+loadI 1024 => r0
+
+// a = 2
+loadI 2 => r1
+
+// b = 3
+loadI 3 => r2
+
+// c = a + b
+add r1, r2 => r3
+
+// a * b
+mult r1, r2 => r4
+
+// a * c
+mult r1, r3 => r5
+
+// d = a * b + a * c
+add r4, r5 => r6
+
+// d = a + c + d
+add r1, r3 => r7
+add r6, r7 => r6
+
+storeAI r1 => r0,4
+storeAI r2 => r0,8
+storeAI r3 => r0,12
+storeAI r6 => r0,16
+
+outputAI r0, 16
 ```
 
 ## Problem 2 - Anti-Dependencies
@@ -160,15 +313,11 @@ The program takes a total of 48 cycles (since outputAI is scheduled on the 47th 
 
 #### 2. Show the dependency graph for the basic block
 
-<p align="center">
-  <img src="./3.2.png" />
-</p>
+![](https://i.gyazo.com/84c8e96294da560dda85c2aa263af995.png)
 
 #### 3. Label the nodes in the dependency graph based on the longest latency-weighted path.
 
-<p align="center">
-  <img src="./3.3.png" />
-</p>
+![](https://i.gyazo.com/cbb3530e551483e8db176d93ec2bb2d5.png)
 
 #### 4. Show the result of forward list scheduling, i.e., S(n) using the longest latency weighted path heuristic. How many cycles does the program take
 
