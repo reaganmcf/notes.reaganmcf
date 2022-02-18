@@ -201,7 +201,7 @@ Our code now looks like the following
 loadI 1024 => r0
 loadI 1 => rb
 loadI 2 => r2
-subI r2, 4=> r3
+subI r2, 4=> r93
 add rb, r2 => rc
 addI rc, rb => ra
 mult r3, ra => r6
@@ -224,21 +224,32 @@ loadI 1024 => r0
 loadI 1 => rb
 loadI 2 => f1
 storeAI f1 => r0, @r2 // spill r2
-subI f1, 4 => f2
-storeAI f2 => r0, @r3 // spill r2
+loadAI r0, @r2 => f1 // load spilled r2
+subI f1, 4=> f2
+storeAI f2 => r0, @r3 // spill r3
+loadAI r0, @r2 => f1 // load spilled r2
 add rb, f1 => rc
 addI rc, rb => ra
-loadAI r0, @r3 => f1
+loadAI r0, @r3 => f1 // load spilled r3
 mult f1, ra => f2
 storeAI f2 => r0, @r6 // spill r6
-sub ra, f2 => f1
-storeAI f1 => r0, @r7 // spill r7
-add rc, ra => f2
-storeAI f2 => r0, @r8 // spill r8
-add f2, f1 => f1
-storeAI f1 => r0, @r9 // spill r9
-add f1, rb => f2
-storeAi f2 => r0, @10 // spill r10
-storeAI f2 => r0, 4
+loadAI r0, @r6 => f1 // load spilled r6
+sub ra, f1 => f2
+storeAI f2 => r0, @r7 // spill r7
+add rc, ra => f1
+storeAI f1 => r0, @r8 // spill r8
+loadAI r0, @r7 => f1 // load spilled r7
+loadAI r0, @r8 => f2 // load spilled r8
+add f2, f1 => f2
+storeAI f2 => r0, @r9 // spill r9
+loadAI r0, @r9 => f1 // load spilled r9
+add f1, rb => f1
+storeAI f1 => r0, @r10 // spill r10
+loadAI r0, @r10 => f1 // load spilled r10
+storeAI f1 => r0, 4
 outputAI r0, 4
 ```
+
+Note that after every use of a feasible register, I am making sure to spill it into memory. Also, every location where a spilled value is used I have added a loadAI instruction before. The instructions were not clear on if we are able to skip loads if we know a feasible register already contains the spilled register value. There are trivial cases where we could skip some of these instructions, but to be safe, I am spilling and loading every single time.
+
+Lastly, for the sake of clarity I keep the spilled value offsets in the form of `@r` instead of actual immediate values. "Real" ILOC code would determine the actual addresses of these values.
