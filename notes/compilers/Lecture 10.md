@@ -184,3 +184,5 @@ Applying the subset construction
 | ------------------- | ------------------------ | ------------------------ | ---- |
 | {q0}                | {q1, q2 q3, q9, q4, q6 } | none                     | none |
 | {q1,q2,q3,q9,q4,q6} | none                     | {q5, q8, q3, q6, q4, q9} |      |
+
+Finished in the next lecture...
