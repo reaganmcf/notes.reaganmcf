@@ -1,7 +1,9 @@
 # Homework 3
 
 Name: Reagan McFarland
+
 Date: March 7th, 2022
+
 NETID: rpm141
 
 ## Problem 1
@@ -54,8 +56,7 @@ Note that the start state is `S0`, and the accepting state is marked green (`S4`
 
 #### 2.2) The set of all strings that do not have three consecutive "b"s and end in an "a".
 
-TODO
-
+![](https://i.gyazo.com/f0f52400c045870a8db22e136d33a2ef.png)
 
 ## Problem 3
 
@@ -90,6 +91,7 @@ The DFA based on the subset construction above is the following
 Using Hopcroft's Algorithm, let's initially partition our states into the Final states, and not final states.
 
 | Partition | Current Partition      | a       | b       | c         | d        |
+| --------- | ---------------------- | ------- | ------- | --------- | -------- |
 | P0        | {S1, S4} {S0, S2, S3}  | {S0, S2, S3} splits on a to {S0}, {S2, S3}  | none    | {S1, S4} splits on c into {S1}, {S4}      | none |
 | P1        | {S1}, {S4}, {S0}, {S2, S3} | none | none | none | {S2, S3} splits on d into {S2}, {S3} |
 | P2        | {S1}, {S4}, {S0}, {S2}, {S3} | none | none | none | none |
