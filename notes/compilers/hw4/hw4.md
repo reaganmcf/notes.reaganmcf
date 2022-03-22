@@ -33,15 +33,18 @@ A -> (B) -> (B,A) -> (B,a) -> -> ((B),a) -> ((B,A),a) -> ((B,a),a) -> ((A,a),a) 
 
 ### 2.1) Compute the _FIRST_ and _FOLLOW_ sets for the grammar
 
-FIRST(ICONST) = {1,2,3,4,5}
-FIRST(ID) = {a, b, c}
-FIRST(Expr) = {+, -, \*} ∪ FIRST(ICONST) = {+, -, \*, 1, 2, 3, 4, 5}
-FIRST(Print) = {\!}
-FIRST(Assign} = FIRST(ID) = {a, b, c}
-FIRST(Stmt) = FIRST(Assign) ∪ FIRST(Print) = {\!, a, b, c}
-FIRST(NextStmt) = {;, ε}
-FIRST(Stmtlist) = FIRST(Stmt) = {\!, a, b, c}
-FIRST(Program) = FIRST(Stmtlist) = {\!, a, b, c}
+- FIRST(ICONST) = {1,2,3,4,5}
+- FIRST(ID) = {a, b, c}
+- FIRST(Expr) = {+, -, \*} ∪ FIRST(ICONST) = {+, -, \*, 1, 2, 3, 4, 5}
+- FIRST(Print) = {\!}
+- FIRST(Assign} = FIRST(ID) = {a, b, c}
+- FIRST(Stmt) = FIRST(Assign) ∪ FIRST(Print) = {\!, a, b, c}
+- FIRST(NextStmt) = {;, ε}
+- FIRST(Stmtlist) = FIRST(Stmt) = {\!, a, b, c}
+- FIRST(Program) = FIRST(Stmtlist) = {\!, a, b, c}
+
+- FOLLOW(ICONST) = {+, -, \*, 1, 2, 3, 4, 5}
+- FOLLOW(ID) = {
 
 | Rule              | FIRST             | FOLLOW             |
 | ----------------- | ----------------- | ------------------ |
