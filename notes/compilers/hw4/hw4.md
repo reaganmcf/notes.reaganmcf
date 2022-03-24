@@ -42,10 +42,63 @@ A -> (B) -> (B,A) -> (B,a) -> -> ((B),a) -> ((B,A),a) -> ((B,a),a) -> ((A,a),a) 
 - FIRST(NextStmt) = {;, ε}
 - FIRST(Stmtlist) = FIRST(Stmt) = {\!, a, b, c}
 - FIRST(Program) = FIRST(Stmtlist) = {\!, a, b, c}
+  
+- FOLLOW(Program) = { eof }
+- FOLLOW(Stmtlist) = { . }
+- FOLLOW(NextStmt) = FOLLOW(Stmtlist) = { . }
+- FOLLOW(Stmt) = FIRST(NextStmt) = { ; }
+- FOLLOW(Assign) = FOLLOW(Stmt) = { ; }
+- FOLLOW(Print) = FOLLOW(Stmt) = { ; }
+- FOLLOW(Expr) = FIRST(Expr) ∪ FOLLOW(Assign) = {+, -, \*, 1, 2, 3, 4, 5, ;} 
+- FOLLOW(ICONST) = ∅ 
+- FOLLOW(ID) = ∅
 
-- FOLLOW(ICONST) = {+, -, \*, 1, 2, 3, 4, 5}
-- FOLLOW(ID) = {
+### 2.2) Compute the LL(1) parse table for the resulting grammar. Is the grammar LL(1) or not? Justify your answer
 
-| Rule              | FIRST             | FOLLOW             |
-| ----------------- | ----------------- | ------------------ |
-| Program           | 
+- FIRST+(Program) = {\!, a, b, c }
+- FIRST+(StmtList) = {\!, a, b, c }
+- FIRST+(NextStmt) = {;} ∪ FOLLOW(NextStmt) = { ;, . }
+- FIRST+(Stmt) = { \!, a, b, c }
+- FIRST+(Assign) = {a, b, c}
+- FIRST+(Print) = {\!}
+- FIRST+(Expr) = {+, -, \*, 1, 2, 3, 4, 5}
+- FIRST+(ID) = {a, b, c}
+- FIRST+(ICONST) = {1, 2, 3, 4, 5}
+
+
+| Rule        | \. | ; | ! | = | + | - | * | a | b | c | 1 | 2 | 3 | 4 | 5 | eof |
+| ----------- | -- | - | - | - | - | - | - | - | - | - | - | - | - | - | - | --- |
+| Program     |    |   | Stmtlist . |||||Stmtlist .|Stmtlist .|Stmtlist .|
+| StmtList    |    |   | Stmt NextStmt|||||Stmt NextStmt|Stmt NextStmt|Stmt NextStmt|
+| NextStmt    | 𝝴  | ; Stmtlist |
+| Stmt        |    |   | Print ||||| Assign | Assign | Assign |
+| Assign      |    |   |   |   |   |   |   | ID = Expr | ID = Expr | ID = Expr |
+| Print       |    |   | ! ID  |
+| Expr        |    |   |   |   | + Expr Expr | - Expr Expr | \* Expr Expr |||| ICONST | ICONST | ICONST | ICONST | ICONST|
+| ID          ||||||||a|b|c|
+|ICONST       |||||||||||1|2|3|4|5
+
+The grammar **IS LL(1)** because there are no entries defined multiple times in the same column. You can always derive the grammar by only having to look ahead one token at a time.
+
+### 2.3) If the resulting grammar is LL(1), show the behavior of the LL(1) skeleton table-driven parser as a sequence of states [stack content, remaining input, next action to be taken] on sentence `c=3;!c.`
+
+```
+([eof, Program], c=3;!c., Stmtlist .) =>
+([eof, ., Stmtlist], c=3;!c., Stmt NextStmt) =>
+([eof, ., NextStmt, Stmt], c=3;!c., Assign) =>
+([eof, ., NextStmt, Assign], c=3;!c., ID = Expr) =>
+([eof, ., NextStmt, Expr, =, ID], c=3;!c., next input + pop) =>
+([eof, ., NextStmt, Expr, =], =3;!c., next input + pop) =>
+([eof, ., NextStmt, Expr], 3;!c., ICONST) =>
+([eof, ., NextStmt, ICONST], 3;!c., next input + pop) =>
+([eof, ., NextStmt], ;!c., ; StmtList) =>
+([eof, ., StmtList, ;], ;!c., next input + pop) =>
+([eof, ., StmtList], !c., Stmt NextStmt) =>
+([eof, ., NextStmt, Stmt], !c., Print) => 
+([eof, ., NextStmt, Print], !c., ! ID) =>
+([eof, ., NextStmt, ID, !], !c., next input + pop) =>
+([eof, ., NextStmt, ID], c., next input + pop) =>
+([eof, ., NextStmt], ., pop) =>
+([eof, .], ., next input + pop) =>
+([eof], accept)
+```
