@@ -39,7 +39,9 @@ int main(int argc, char** argv) {
   //  token = next_token();
   //}
   
-  printf("Valid program? %s\n", Program() > 0 ? "true" : "false");
+  Program();
+  
+  //printf("Valid program? %s\n", Program() > 0 ? "true" : "false");
 }
 
 int Program() {
@@ -49,14 +51,13 @@ int Program() {
     case 'a':
     case 'b':
     case 'c':
-      printf("Program -> Stmtlist .\n");
+      //printf("Program -> Stmtlist .\n");
       if (Stmtlist() < 0) {
         return -1;
       }
 
       // check '.'
       token = curr_token();
-      printf("token is %c\n", token);
       return token == '.' ? 1 : -1;
     default:
       return -1;
@@ -70,7 +71,7 @@ int Stmtlist() {
     case 'a':
     case 'b':
     case 'c':
-      printf("Stmtlist -> Stmt NextStmt\n");
+      //printf("Stmtlist -> Stmt NextStmt\n");
       if (Stmt() < 0) {
         return -1;
       }
@@ -88,7 +89,7 @@ int NextStmt() {
     case '.':
       return 1;
     case ';':
-      printf("NextStmt -> ; Stmtlist\n");
+      //printf("NextStmt -> ; Stmtlist\n");
       token = next_token();
       return Stmtlist();
     default:
@@ -100,12 +101,12 @@ int Stmt() {
   char token = curr_token();
   switch (token) {
     case '!':
-      printf("Stmt -> Print\n");
+      //printf("Stmt -> Print\n");
       return Print();
     case 'a':
     case 'b':
     case 'c':
-      printf("Stmt -> Assign\n");
+      //printf("Stmt -> Assign\n");
       return Assign();
     default:
       return -1;
@@ -116,9 +117,25 @@ int Print() {
   char token = curr_token();
   switch(token) {
     case '!':
-      printf("Print -> ! ID\n");
+      //printf("Print -> ! ID\n");
       token = next_token();
-      return ID();
+      if (ID() < 0) {
+        return -1;
+      }
+      
+      switch (token) {
+        case 'a':
+          printf("%d\n", a);
+          break;
+        case 'b':
+          printf("%d\n", b);
+          break;
+        case 'c':
+          printf("%d\n", c);
+          break;
+      }
+
+      return 1;
     default:
       return -1;
   }
@@ -130,20 +147,38 @@ int Assign() {
     case 'a':
     case 'b':
     case 'c':
-      printf("Assign -> ID = Expr\n");
+      //printf("Assign -> ID = Expr\n");
       if (ID() < 0) {
         return -1;
       }
       
-      printf("ID value is %c\n", token);
+      char id = token; 
 
       token = next_token();
       if (token != '=') {
         return -1;
       }
 
-      token = next_token();
-      return Expr();
+      next_token();
+      int val = Expr();
+      if (val < 0) {
+        return -1;
+      }
+
+      //printf("\tAssigning %d to %c\n", val, id);
+      switch (id) {
+        case 'a':
+          a = val;
+          break;
+        case 'b':
+          b = val;
+          break;
+        case 'c':
+          c = val;
+          break;
+      }
+
+      return 1;
     default:
       return -1;
   }
@@ -151,40 +186,59 @@ int Assign() {
 
 int Expr() {
   char token = curr_token();
+
+  int lhs, rhs;
   switch(token) {
     case '+':
-      printf("Expr -> + Expr Expr\n");
-      token = next_token();
-      if (Expr() < 0) {
+      //printf("Expr -> + Expr Expr\n");
+      next_token();
+      lhs = Expr();
+      if (lhs < 0) {
         return -1;
       }
 
-      token = next_token();
-      return Expr();
+      next_token();
+      rhs = Expr();
+      if (rhs < 0) {
+        return -1;
+      } 
+      
+      return lhs + rhs;
     case '-':
-      printf("Expr -> - Expr Expr\n");
-      token = next_token();
-      if (Expr() < 0) {
+      //printf("Expr -> - Expr Expr\n");
+      next_token();
+      lhs = Expr();
+      if (lhs < 0) {
         return -1;
       }
 
-      token = next_token();
-      return Expr();
+      next_token();
+      rhs = Expr();
+      if (rhs < 0) {
+        return -1;
+      }
+      return lhs - rhs;
     case '*':
-      printf("Expr -> * Expr Expr\n");
-      token = next_token();
-      if (Expr() < 0) {
+      //printf("Expr -> * Expr Expr\n");
+      next_token();
+      lhs = Expr();
+      if (lhs < 0) {
         return -1;
       }
 
-      token = next_token();
-      return Expr();
+      next_token();
+      rhs = Expr();
+      if (rhs < 0) {
+        return -1;
+      }
+
+      return lhs * rhs;
     case '1':
     case '2':
     case '3':
     case '4':
     case '5':
-      printf("Expr -> ICONST\n");
+      //printf("Expr -> ICONST\n");
       return ICONST();
     default: 
       return -1;
@@ -195,13 +249,13 @@ int ID() {
   char token = curr_token();
   switch (token) {
     case 'a':
-      printf("ID -> a\n");
+      //printf("ID -> a\n");
       return 1;
     case 'b':
-      printf("ID -> b\n");
+      //printf("ID -> b\n");
       return 1;
     case 'c':
-      printf("ID -> c\n");
+      //printf("ID -> c\n");
       return 1;
     default:
       return -1;
@@ -212,20 +266,20 @@ int ICONST() {
   char token = curr_token();
   switch (token) {
     case '1':
-      printf("ICONST -> 1\n");
+      //printf("ICONST -> 1\n");
       return 1;
     case '2':
-      printf("ICONST -> 2\n");
-      return 1;
+      //printf("ICONST -> 2\n");
+      return 2;
     case '3':
-      printf("ICONST -> 3\n");
-      return 1;
+      //printf("ICONST -> 3\n");
+      return 3;
     case '4':
-      printf("ICONST -> 4\n");
-      return 1;
+      //printf("ICONST -> 4\n");
+      return 4;
     case '5':
-      printf("ICONST -> 1\n");
-      return 1;
+      //printf("ICONST -> 1\n");
+      return 5;
     default:
       return -1;
   }
