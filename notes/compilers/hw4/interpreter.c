@@ -55,6 +55,8 @@ int Program() {
       }
 
       // check '.'
+      token = curr_token();
+      printf("token is %c\n", token);
       return token == '.' ? 1 : -1;
     default:
       return -1;
