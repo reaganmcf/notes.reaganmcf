@@ -102,3 +102,13 @@ The grammar **IS LL(1)** because there are no entries defined multiple times in 
 ([eof, .], ., next input + pop) =>
 ([eof], accept)
 ```
+
+### 3.1) Write an interpreter for the language above
+
+Attached with my submission. The only implementation specific thing in this program is that `ICONST()` and `Expr()` return the values of the number / expression on success, and -1 on failed parse. This makes it much easier to recursively deal with evaluations.
+
+### 3.2) Write a compiler for the langauge above
+
+Attached with my submission. The only implementation specific thing in this program is that `ICONST()` and `Expr()` return the register number that the constant was loaded into / the register number the expr was loaded into. This makes it much easier to recursively deal with nested expressions.
+
+Also, I am using `r0, 4`, `r0, 8`, and `r0, 12` for the memory locations of variables `a`, `b`, and `c`, respectively.
