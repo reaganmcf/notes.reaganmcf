@@ -192,7 +192,15 @@ This grammar **IS** LR(1) because we have no conflicts in our ACTION and GOTO ta
 
 ## Problem 2 - LR(0)
 
-Show that the above grammar (Problem 1) is not LR(0). Note that it is sufficient to show one state where there is a conflict (Hint: you don't need to enumerate _all_ states)
+#### Show that the above grammar (Problem 1) is not LR(0). Note that it is sufficient to show one state where there is a conflict (Hint: you don't need to enumerate _all_ states)
+
+There is a conflict at State 0 if there is no lookahead: 
+```
+[S -> L.=R, $]
+[R -> L., $]
+```
+
+Without at least one symbol of look ahead, the parser generator does not know to reduce R -> L. unless it knows that there is not a `=` symbol directly after. This is not possible to check with LR(0) since there is no look ahead, while it is possible in LR(1) since there is one symbol of look ahead.
 
 ## Problem 3 - Type Systems
 
