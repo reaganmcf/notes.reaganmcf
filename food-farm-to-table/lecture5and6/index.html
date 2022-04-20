@@ -1,0 +1,387 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.5.3"/><style data-href="/styles.9d7cc391f934a2741051.css" data-identity="gatsby-global-css">@import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
+/*
+! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
+*/*,:after,:before{border:0 solid;box-sizing:border-box}:after,:before{--tw-content:""}html{-webkit-text-size-adjust:100%;font-family:Nunito;line-height:1.5;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-size:100%;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#9ca3af;opacity:1}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]{display:none}*,:after,:before{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.prose{color:var(--tw-prose-body);max-width:65ch}.prose :where([class~=lead]):not(:where([class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-bottom:1.2em;margin-top:1.2em}.prose :where(a):not(:where([class~=not-prose] *)){color:var(--tw-prose-links);font-weight:500;text-decoration:underline}.prose :where(strong):not(:where([class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.prose :where(ol):not(:where([class~=not-prose] *)){list-style-type:decimal;padding-left:1.625em}.prose :where(ol[type=A]):not(:where([class~=not-prose] *)){list-style-type:upper-alpha}.prose :where(ol[type=a]):not(:where([class~=not-prose] *)){list-style-type:lower-alpha}.prose :where(ol[type=A s]):not(:where([class~=not-prose] *)){list-style-type:upper-alpha}.prose :where(ol[type=a s]):not(:where([class~=not-prose] *)){list-style-type:lower-alpha}.prose :where(ol[type=I]):not(:where([class~=not-prose] *)){list-style-type:upper-roman}.prose :where(ol[type=i]):not(:where([class~=not-prose] *)){list-style-type:lower-roman}.prose :where(ol[type=I s]):not(:where([class~=not-prose] *)){list-style-type:upper-roman}.prose :where(ol[type=i s]):not(:where([class~=not-prose] *)){list-style-type:lower-roman}.prose :where(ol[type="1"]):not(:where([class~=not-prose] *)){list-style-type:decimal}.prose :where(ul):not(:where([class~=not-prose] *)){list-style-type:disc;padding-left:1.625em}.prose :where(ol>li):not(:where([class~=not-prose] *))::marker{color:var(--tw-prose-counters);font-weight:400}.prose :where(ul>li):not(:where([class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.prose :where(hr):not(:where([class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-bottom:3em;margin-top:3em}.prose :where(blockquote):not(:where([class~=not-prose] *)){border-left-color:var(--tw-prose-quote-borders);border-left-width:.25rem;color:var(--tw-prose-quotes);font-style:italic;font-weight:500;margin-bottom:1.6em;margin-top:1.6em;padding-left:1em;quotes:"\201C""\201D""\2018""\2019"}.prose :where(blockquote p:first-of-type):not(:where([class~=not-prose] *)):before{content:open-quote}.prose :where(blockquote p:last-of-type):not(:where([class~=not-prose] *)):after{content:close-quote}.prose :where(h1):not(:where([class~=not-prose] *)){color:var(--tw-prose-headings);font-size:2.25em;font-weight:800;line-height:1.1111111;margin-bottom:.8888889em;margin-top:0}.prose :where(h1 strong):not(:where([class~=not-prose] *)){font-weight:900}.prose :where(h2):not(:where([class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.5em;font-weight:700;line-height:1.3333333;margin-bottom:1em;margin-top:2em}.prose :where(h2 strong):not(:where([class~=not-prose] *)){font-weight:800}.prose :where(h3):not(:where([class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.25em;font-weight:600;line-height:1.6;margin-bottom:.6em;margin-top:1.6em}.prose :where(h3 strong):not(:where([class~=not-prose] *)){font-weight:700}.prose :where(h4):not(:where([class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;line-height:1.5;margin-bottom:.5em;margin-top:1.5em}.prose :where(h4 strong):not(:where([class~=not-prose] *)){font-weight:700}.prose :where(figure>*):not(:where([class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose :where(figcaption):not(:where([class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.prose :where(code):not(:where([class~=not-prose] *)){color:var(--tw-prose-code);font-size:.875em;font-weight:600}.prose :where(code):not(:where([class~=not-prose] *)):before{content:"`"}.prose :where(code):not(:where([class~=not-prose] *)):after{content:"`"}.prose :where(a code):not(:where([class~=not-prose] *)){color:var(--tw-prose-links)}.prose :where(pre):not(:where([class~=not-prose] *)){background-color:var(--tw-prose-pre-bg);border-radius:.375rem;color:var(--tw-prose-pre-code);font-size:.875em;font-weight:400;line-height:1.7142857;margin-bottom:1.7142857em;margin-top:1.7142857em;overflow-x:auto;padding:.8571429em 1.1428571em}.prose :where(pre code):not(:where([class~=not-prose] *)){background-color:transparent;border-radius:0;border-width:0;color:inherit;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;padding:0}.prose :where(pre code):not(:where([class~=not-prose] *)):before{content:none}.prose :where(pre code):not(:where([class~=not-prose] *)):after{content:none}.prose :where(table):not(:where([class~=not-prose] *)){font-size:.875em;line-height:1.7142857;margin-bottom:2em;margin-top:2em;table-layout:auto;text-align:left;width:100%}.prose :where(thead):not(:where([class~=not-prose] *)){border-bottom-color:var(--tw-prose-th-borders);border-bottom-width:1px}.prose :where(thead th):not(:where([class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;padding-bottom:.5714286em;padding-left:.5714286em;padding-right:.5714286em;vertical-align:bottom}.prose :where(tbody tr):not(:where([class~=not-prose] *)){border-bottom-color:var(--tw-prose-td-borders);border-bottom-width:1px}.prose :where(tbody tr:last-child):not(:where([class~=not-prose] *)){border-bottom-width:0}.prose :where(tbody td):not(:where([class~=not-prose] *)){padding:.5714286em;vertical-align:baseline}.prose{--tw-prose-body:#374151;--tw-prose-headings:#111827;--tw-prose-lead:#4b5563;--tw-prose-links:#111827;--tw-prose-bold:#111827;--tw-prose-counters:#6b7280;--tw-prose-bullets:#d1d5db;--tw-prose-hr:#e5e7eb;--tw-prose-quotes:#111827;--tw-prose-quote-borders:#e5e7eb;--tw-prose-captions:#6b7280;--tw-prose-code:#111827;--tw-prose-pre-code:#e5e7eb;--tw-prose-pre-bg:#1f2937;--tw-prose-th-borders:#d1d5db;--tw-prose-td-borders:#e5e7eb;--tw-prose-invert-body:#d1d5db;--tw-prose-invert-headings:#fff;--tw-prose-invert-lead:#9ca3af;--tw-prose-invert-links:#fff;--tw-prose-invert-bold:#fff;--tw-prose-invert-counters:#9ca3af;--tw-prose-invert-bullets:#4b5563;--tw-prose-invert-hr:#374151;--tw-prose-invert-quotes:#f3f4f6;--tw-prose-invert-quote-borders:#374151;--tw-prose-invert-captions:#9ca3af;--tw-prose-invert-code:#fff;--tw-prose-invert-pre-code:#d1d5db;--tw-prose-invert-pre-bg:rgba(0,0,0,.5);--tw-prose-invert-th-borders:#4b5563;--tw-prose-invert-td-borders:#374151;font-size:1rem;line-height:1.75}.prose :where(p):not(:where([class~=not-prose] *)){margin-bottom:1.25em;margin-top:1.25em}.prose :where(img):not(:where([class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(video):not(:where([class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(figure):not(:where([class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(h2 code):not(:where([class~=not-prose] *)){font-size:.875em}.prose :where(h3 code):not(:where([class~=not-prose] *)){font-size:.9em}.prose :where(li):not(:where([class~=not-prose] *)){margin-bottom:.5em;margin-top:.5em}.prose :where(ol>li):not(:where([class~=not-prose] *)){padding-left:.375em}.prose :where(ul>li):not(:where([class~=not-prose] *)){padding-left:.375em}.prose>:where(ul>li p):not(:where([class~=not-prose] *)){margin-bottom:.75em;margin-top:.75em}.prose>:where(ul>li>:first-child):not(:where([class~=not-prose] *)){margin-top:1.25em}.prose>:where(ul>li>:last-child):not(:where([class~=not-prose] *)){margin-bottom:1.25em}.prose>:where(ol>li>:first-child):not(:where([class~=not-prose] *)){margin-top:1.25em}.prose>:where(ol>li>:last-child):not(:where([class~=not-prose] *)){margin-bottom:1.25em}.prose :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose] *)){margin-bottom:.75em;margin-top:.75em}.prose :where(hr+*):not(:where([class~=not-prose] *)){margin-top:0}.prose :where(h2+*):not(:where([class~=not-prose] *)){margin-top:0}.prose :where(h3+*):not(:where([class~=not-prose] *)){margin-top:0}.prose :where(h4+*):not(:where([class~=not-prose] *)){margin-top:0}.prose :where(thead th:first-child):not(:where([class~=not-prose] *)){padding-left:0}.prose :where(thead th:last-child):not(:where([class~=not-prose] *)){padding-right:0}.prose :where(tbody td:first-child):not(:where([class~=not-prose] *)){padding-left:0}.prose :where(tbody td:last-child):not(:where([class~=not-prose] *)){padding-right:0}.prose>:where(:first-child):not(:where([class~=not-prose] *)){margin-top:0}.prose>:where(:last-child):not(:where([class~=not-prose] *)){margin-bottom:0}.prose-lg{font-size:1.125rem;line-height:1.7777778}.prose-lg :where(p):not(:where([class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em}.prose-lg :where([class~=lead]):not(:where([class~=not-prose] *)){font-size:1.2222222em;line-height:1.4545455;margin-bottom:1.0909091em;margin-top:1.0909091em}.prose-lg :where(blockquote):not(:where([class~=not-prose] *)){margin-bottom:1.6666667em;margin-top:1.6666667em;padding-left:1em}.prose-lg :where(h1):not(:where([class~=not-prose] *)){font-size:2.6666667em;line-height:1;margin-bottom:.8333333em;margin-top:0}.prose-lg :where(h2):not(:where([class~=not-prose] *)){font-size:1.6666667em;line-height:1.3333333;margin-bottom:1.0666667em;margin-top:1.8666667em}.prose-lg :where(h3):not(:where([class~=not-prose] *)){font-size:1.3333333em;line-height:1.5;margin-bottom:.6666667em;margin-top:1.6666667em}.prose-lg :where(h4):not(:where([class~=not-prose] *)){line-height:1.5555556;margin-bottom:.4444444em;margin-top:1.7777778em}.prose-lg :where(img):not(:where([class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(video):not(:where([class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(figure):not(:where([class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(figure>*):not(:where([class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose-lg :where(figcaption):not(:where([class~=not-prose] *)){font-size:.8888889em;line-height:1.5;margin-top:1em}.prose-lg :where(code):not(:where([class~=not-prose] *)){font-size:.8888889em}.prose-lg :where(h2 code):not(:where([class~=not-prose] *)){font-size:.8666667em}.prose-lg :where(h3 code):not(:where([class~=not-prose] *)){font-size:.875em}.prose-lg :where(pre):not(:where([class~=not-prose] *)){border-radius:.375rem;font-size:.8888889em;line-height:1.75;margin-bottom:2em;margin-top:2em;padding:1em 1.5em}.prose-lg :where(ol):not(:where([class~=not-prose] *)){padding-left:1.5555556em}.prose-lg :where(ul):not(:where([class~=not-prose] *)){padding-left:1.5555556em}.prose-lg :where(li):not(:where([class~=not-prose] *)){margin-bottom:.6666667em;margin-top:.6666667em}.prose-lg :where(ol>li):not(:where([class~=not-prose] *)){padding-left:.4444444em}.prose-lg :where(ul>li):not(:where([class~=not-prose] *)){padding-left:.4444444em}.prose-lg>:where(ul>li p):not(:where([class~=not-prose] *)){margin-bottom:.8888889em;margin-top:.8888889em}.prose-lg>:where(ul>li>:first-child):not(:where([class~=not-prose] *)){margin-top:1.3333333em}.prose-lg>:where(ul>li>:last-child):not(:where([class~=not-prose] *)){margin-bottom:1.3333333em}.prose-lg>:where(ol>li>:first-child):not(:where([class~=not-prose] *)){margin-top:1.3333333em}.prose-lg>:where(ol>li>:last-child):not(:where([class~=not-prose] *)){margin-bottom:1.3333333em}.prose-lg :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose] *)){margin-bottom:.8888889em;margin-top:.8888889em}.prose-lg :where(hr):not(:where([class~=not-prose] *)){margin-bottom:3.1111111em;margin-top:3.1111111em}.prose-lg :where(hr+*):not(:where([class~=not-prose] *)){margin-top:0}.prose-lg :where(h2+*):not(:where([class~=not-prose] *)){margin-top:0}.prose-lg :where(h3+*):not(:where([class~=not-prose] *)){margin-top:0}.prose-lg :where(h4+*):not(:where([class~=not-prose] *)){margin-top:0}.prose-lg :where(table):not(:where([class~=not-prose] *)){font-size:.8888889em;line-height:1.5}.prose-lg :where(thead th):not(:where([class~=not-prose] *)){padding-bottom:.75em;padding-left:.75em;padding-right:.75em}.prose-lg :where(thead th:first-child):not(:where([class~=not-prose] *)){padding-left:0}.prose-lg :where(thead th:last-child):not(:where([class~=not-prose] *)){padding-right:0}.prose-lg :where(tbody td):not(:where([class~=not-prose] *)){padding:.75em}.prose-lg :where(tbody td:first-child):not(:where([class~=not-prose] *)){padding-left:0}.prose-lg :where(tbody td:last-child):not(:where([class~=not-prose] *)){padding-right:0}.prose-lg>:where(:first-child):not(:where([class~=not-prose] *)){margin-top:0}.prose-lg>:where(:last-child):not(:where([class~=not-prose] *)){margin-bottom:0}.visible{visibility:visible}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.z-30{z-index:30}.mx-auto{margin-left:auto;margin-right:auto}.mt-8{margin-top:2rem}.ml-4{margin-left:1rem}.mt-4{margin-top:1rem}.flex{display:flex}.hidden{display:none}.h-screen{height:100vh}.h-full{height:100%}.h-20{height:5rem}.min-h-screen{min-height:100vh}.w-full{width:100%}.flex-1{flex:1 1 0%}.flex-none{flex:none}.flex-grow{flex-grow:1}.transform{-webkit-transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.items-center{align-items:center}.overflow-y-scroll{overflow-y:scroll}.border-r-2{border-right-width:2px}.border-r-gray-dark{--tw-border-opacity:1;border-right-color:rgb(229 230 233/var(--tw-border-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-gray-light{--tw-bg-opacity:1;background-color:rgb(249 251 252/var(--tw-bg-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity))}.bg-opacity-90{--tw-bg-opacity:0.9}.py-4{padding-bottom:1rem;padding-top:1rem}.px-4{padding-left:1rem;padding-right:1rem}.py-6{padding-bottom:1.5rem;padding-top:1.5rem}.pb-20{padding-bottom:5rem}.pl-4{padding-left:1rem}.pr-4{padding-right:1rem}.pt-10{padding-top:2.5rem}.pb-4{padding-bottom:1rem}.text-xl{font-size:1.25rem}.text-lg,.text-xl{line-height:1.75rem}.text-lg{font-size:1.125rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.font-semibold{font-weight:600}.font-thin{font-weight:100}.font-bold{font-weight:700}.text-\[\#888888\]{--tw-text-opacity:1;color:rgb(136 136 136/var(--tw-text-opacity))}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.filter{-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,fill,stroke,opacity,box-shadow,-webkit-text-decoration-color,-webkit-transform,-webkit-filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-transform,-webkit-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}img{--tw-drop-shadow:drop-shadow(0 20px 13px rgba(0,0,0,.03)) drop-shadow(0 8px 5px rgba(0,0,0,.08));-webkit-filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);margin-left:auto;margin-right:auto}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#f8f8f2;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px rgba(0,0,0,.3);white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{border-radius:.3em;margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#282a36}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#6272a4}token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#ff79c6}.token.boolean,.token.number{color:#bd93f9}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#50fa7b}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#f1fa8c}.token.keyword{color:#8be9fd}.token.important,.token.regex{color:#ffb86c}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}pre[class*=language-].line-numbers{counter-reset:linenumber;padding-left:3.8em;position:relative}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{border-right:1px solid #999;font-size:100%;left:-3.8em;letter-spacing:-1px;pointer-events:none;position:absolute;top:0;-webkit-user-select:none;-ms-user-select:none;user-select:none;width:3em}.line-numbers-rows>span{counter-increment:linenumber;display:block}.line-numbers-rows>span:before{color:#999;content:counter(linenumber);display:block;padding-right:.8em;text-align:right}.tree-view{overflow-y:hidden}.tree-view_children{margin-left:16px}.tree-view_children-collapsed{height:0}.tree-view_arrow{cursor:pointer;display:inline-block;margin-right:6px;-webkit-user-select:none;-ms-user-select:none;user-select:none}.tree-view_arrow:after{content:"▾"}.tree-view_arrow-collapsed{-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}</style><link as="script" rel="preload" href="/webpack-runtime-83f76986492883e0816a.js"/><link as="script" rel="preload" href="/framework-04b3cf91005a8c093a87.js"/><link as="script" rel="preload" href="/app-013735a13a1cac37c6e5.js"/><link as="script" rel="preload" href="/component---src-pages-markdown-remark-frontmatter-slug-tsx-ad0ba1135c55d817ad47.js"/><link as="fetch" rel="preload" href="/page-data/food-farm-to-table/lecture5and6/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1727495174.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="min-h-screen flex"><div class="bg-gray-light h-screen border-r-2 border-r-gray-dark"><div class="bg-white w-full pl-4 pt-10 pb-4 items-center shadow"><a href="/"><p class="font-bold text-4xl">📝 Notes</p></a><div class="text-[#888888] text-sm mt-4 flex items-center"><img class="flex-none" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgNC41NTdjLS44ODMuMzkyLTEuODMyLjY1Ni0yLjgyOC43NzUgMS4wMTctLjYwOSAxLjc5OC0xLjU3NCAyLjE2NS0yLjcyNC0uOTUxLjU2NC0yLjAwNS45NzQtMy4xMjcgMS4xOTUtLjg5Ny0uOTU3LTIuMTc4LTEuNTU1LTMuNTk0LTEuNTU1LTMuMTc5IDAtNS41MTUgMi45NjYtNC43OTcgNi4wNDUtNC4wOTEtLjIwNS03LjcxOS0yLjE2NS0xMC4xNDgtNS4xNDQtMS4yOSAyLjIxMy0uNjY5IDUuMTA4IDEuNTIzIDYuNTc0LS44MDYtLjAyNi0xLjU2Ni0uMjQ3LTIuMjI5LS42MTYtLjA1NCAyLjI4MSAxLjU4MSA0LjQxNSAzLjk0OSA0Ljg5LS42OTMuMTg4LTEuNDUyLjIzMi0yLjIyNC4wODQuNjI2IDEuOTU2IDIuNDQ0IDMuMzc5IDQuNiAzLjQxOS0yLjA3IDEuNjIzLTQuNjc4IDIuMzQ4LTcuMjkgMi4wNCAyLjE3OSAxLjM5NyA0Ljc2OCAyLjIxMiA3LjU0OCAyLjIxMiA5LjE0MiAwIDE0LjMwNy03LjcyMSAxMy45OTUtMTQuNjQ2Ljk2Mi0uNjk1IDEuNzk3LTEuNTYyIDIuNDU3LTIuNTQ5eiIvPjwvc3ZnPg=="/><p class="flex-grow ml-4">@reaganmcf_</p></div></div><div class="px-4 py-6"><div class="ml-4"></div><div class="tree-view "><div class="tree-view_item font-bold text-lg"><div class=" tree-view_arrow"></div>compilers</div><div class="tree-view_children "><div class="ml-4"><a href="/compilers/lecture-1">Compilers - Lecture 1</a></div><div class="ml-4"><a href="/compilers/lecture-10">Compilers - Lecture 10</a></div><div class="ml-4"><a href="/compilers/lecture-11">Compilers - Lecture 11</a></div><div class="ml-4"><a href="/compilers/lecture-12">Compilers - Lecture 12</a></div><div class="ml-4"><a href="/compilers/lecture-13">Compilers - Lecture 13</a></div><div class="ml-4"><a href="/compilers/lecture-14">Compilers - Lecture 14</a></div><div class="ml-4"><a href="/compilers/lecture-15">Compilers - Lecture 15</a></div><div class="ml-4"><a href="/compilers/lecture-16">Compilers - Lecture 16</a></div><div class="ml-4"><a href="/compilers/lecture-17">Compilers - Lecture 17</a></div><div class="ml-4"><a href="/compilers/lecture-18">Compilers - Lecture 18</a></div><div class="ml-4"><a href="/compilers/lecture-19">Compilers - Lecture 19</a></div><div class="ml-4"><a href="/compilers/lecture-2">Compilers - Lecture 2</a></div><div class="ml-4"><a href="/compilers/lecture-20">Compilers - Lecture 20</a></div><div class="ml-4"><a href="/compilers/lecture-21">Compilers - Lecture 21</a></div><div class="ml-4"><a href="/compilers/lecture-22">Compilers - Lecture 22</a></div><div class="ml-4"><a href="/compilers/lecture-23">Compilers - Lecture 23</a></div><div class="ml-4"><a href="/compilers/lecture-3">Compilers - Lecture 3</a></div><div class="ml-4"><a href="/compilers/lecture-4">Compilers - Lecture 4</a></div><div class="ml-4"><a href="/compilers/lecture-5">Compilers - Lecture 5</a></div><div class="ml-4"><a href="/compilers/lecture-6">Compilers - Lecture 6</a></div><div class="ml-4"><a href="/compilers/lecture-7">Compilers - Lecture 7</a></div><div class="ml-4"><a href="/compilers/lecture-8">Compilers - Lecture 8</a></div><div class="ml-4"><a href="/compilers/lecture-9">Compilers - Lecture 9</a></div><div class="ml-4"><a href="/compilers/intro">Compilers - Intro</a></div></div></div><div class="tree-view "><div class="tree-view_item font-bold text-lg"><div class=" tree-view_arrow"></div>data101</div><div class="tree-view_children "><div class="ml-4"><a href="/data101/lecture-1">Data 101 - Plots</a></div><div class="ml-4"><a href="/data101/lecture-6">Data 101 - Free Style Data Exploration</a></div><div class="ml-4"><a href="/data101/lecture-8">Data 101 - Lecture 8</a></div></div></div><div class="tree-view "><div class="tree-view_item font-bold text-lg"><div class=" tree-view_arrow"></div>food farm to table</div><div class="tree-view_children "><div class="ml-4"><a href="/food-farm-to-table/lecture1">Foods - Lecture 1</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture11">Foods - Lecture 11</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture12">Foods - Lecture 12</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture13">Foods - Lecture 13</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture14">Foods - Lecture 14</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture16">Foods - Lecture 16</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture17">Foods - Lecture 17</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture18">Foods - Lecture 18</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture2">Foods - Lecture 2</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture3">Foods - Lecture 3</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture4">Foods - Lecture 4</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture5and6">Foods - Lecture 5 &amp; 6</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture7">Foods - Lecture 7</a></div><div class="ml-4"><a href="/food-farm-to-table/lecture8">Processing of Fruits &amp; Vegetables</a></div></div></div></div></div><div class="flex-1 h-screen overflow-y-scroll pb-20"><div class="w-full h-20" style="visibility:visible"><div class="w-full h-full flex items-center shadow bg-white bg-opacity-90"><div class="flex-none"><p class="text-xl py-4 pl-4 font-semibold">Foods - Lecture 5 &amp; 6</p></div><div class="flex-grow"></div><div class="flex-none"><p class="pr-4 font-thin">February 01, 2021</p></div></div></div><div class="fixed h-20 top-0 z-30 w-full" style="visibility:hidden;transition:all .2s ease-out;transform:translate(0, -100%)"><div class="w-full h-full flex items-center shadow bg-white bg-opacity-90"><div class="flex-none"><p class="text-xl py-4 pl-4 font-semibold">Foods - Lecture 5 &amp; 6</p></div><div class="flex-grow"></div><div class="flex-none"><p class="pr-4 font-thin">February 01, 2021</p></div></div></div><article class="prose prose-lg mx-auto mt-8"><h1>Food Processing</h1>
+<ul>
+<li>How big is the food industry?
+<ul>
+<li>Second largest manufacturing industry sector in the US with sales over 5.32 trillion as of 2014</li>
+</ul>
+</li>
+</ul>
+<h2>Food Engineering vs Food Processing</h2>
+<p><strong>Food Engineering</strong></p>
+<ul>
+<li>Application of Mathematical and Physical science principles to enable to development of food processing operations for the <strong>manufacture of foods in large quantities</strong> and with narrow tolerances to the consumer high quality, safe and healthy foods</li>
+<li><strong>Main emphasis is on</strong>
+<ul>
+<li>Large quantities</li>
+<li>Equipment
+Properties of food materials, i.e., thermal, physical, rheological</li>
+<li>Packaging design</li>
+<li>Mathematical applications</li>
+</ul>
+</li>
+</ul>
+<p><strong>Food Processing</strong></p>
+<ul>
+<li>Applying Food Engineering, Food Chemistry, Food Biology principles to foods and food ingredients to impart specific <strong>quality and safety</strong></li>
+<li><strong>Main emphasis is on</strong>
+<ul>
+<li><strong>Ensure food safety</strong></li>
+<li>Increase digestibility and <strong>shelf life</strong></li>
+<li>Add value (texture, flavor, color)</li>
+</ul>
+</li>
+</ul>
+<h3>Food processing</h3>
+<ul>
+<li>
+<p>New or old technology?</p>
+<ul>
+<li>We have used science and technology for thousands of years to help to provide adequate food</li>
+<li>The progression from hunter-gatherer to agriculture led to the need to store and preserve foods</li>
+<li><strong>Without some form of processing, foods deteriorate rapidly due to the action of micro-organisms and enzymes</strong></li>
+</ul>
+</li>
+<li>
+<p>What <strong>early methods of processing and preservation can you think of?</strong></p>
+<ul>
+<li>Using chemicals
+<ul>
+<li>Pickling</li>
+<li>Salting meat</li>
+<li>Sugar to make jam</li>
+<li>Storing in Alcohol</li>
+</ul>
+</li>
+<li>Temperature control
+<ul>
+<li>Sun drying fruit</li>
+<li>Using ice blocks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>The major processed crops in the US are tomatoes, potatoes, and oranges</strong></p>
+</li>
+<li>
+<p>Also, corn, cucumbers, jams / jellies, etc.</p>
+</li>
+<li>
+<p>Canned goods and frozen foods each account for about 45% of industry revenue; dried foods account for about 10%</p>
+</li>
+</ul>
+<h3>Climacteric Fruits vs. Non-Climacteric Fruits</h3>
+<table>
+<thead>
+<tr>
+<th>Climacteric Fruits</th>
+<th>Non-Climacteric Fruits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apples, Apricots, Avocado, Banana, Peach, Pear, Plum, Tomato, Papaya, Mango</td>
+<td>Cherry, Citrus Fruits, Grapes, Melon, Pineapple, Strawberry</td>
+</tr>
+<tr>
+<td><strong>Ripen after harvesting</strong></td>
+<td>**Ripen prior to harvest **</td>
+</tr>
+</tbody>
+</table>
+<h4>Ethylene</h4>
+<ul>
+<li><strong>Ethylene</strong> is important in fresh produce marketing</li>
+<li>Used commercially for the artificial ripening of the climacteric fruits</li>
+<li>This <strong>has made it possible for tropical fruits such as mangoes and bananas to be harvested green and shipped to distant market,s where they are ripened under controlled conditions.</strong></li>
+</ul>
+<h3>Minimally processed foods</h3>
+<ul>
+<li>In recent years, demand has increased for minimally processed foods which retain their freshness. New techniques have replaced methods that rely on heating and drying.</li>
+<li><strong>Modified atmosphere packaging is a way of extending the shelf life of fresh food products.</strong></li>
+<li>The technology substitutes the air inside a package with a protective gas mix.</li>
+<li>The gas in the package helps ensure that the product will stay fresh for as long as possible</li>
+</ul>
+<h3>Active / Smart Packaging</h3>
+<ul>
+<li>Extending functionality of food packaging beyond containment</li>
+<li><strong>Package used actively to cook product inside the package</strong>
+<ul>
+<li>Example: Steam fresh vegetables that reheat in the bag in the microwave.</li>
+</ul>
+</li>
+</ul>
+<h4>Microwave heating</h4>
+<ul>
+<li>
+<p>Conversion of electrical energy to microwave energy to heat foods (magnetron)</p>
+</li>
+<li>
+<p>Interacts with charged molecules and heats by friction</p>
+<ul>
+<li>Water</li>
+<li>Salt</li>
+<li>Sugars</li>
+</ul>
+</li>
+<li>
+<p>Remaining heat takes place by conduction</p>
+</li>
+</ul>
+<h5>Quality control in Microwavable bags</h5>
+<ul>
+<li><strong>FDA regulates the food packaging material</strong> and also polymers that can be used as indirect contact with products that are cooked inside the package</li>
+<li>They also regulate new materials used for microwave cooking or other new cooking technologies inside package</li>
+<li><strong>USDA regulates the product temperature</strong>: Food safety partners launch campaign to reduce food poisoning due to undercooked pre-prepared foods, a consumer awareness program for microwavable frozen foods by USDA’s Food Safety and Inspection Service (FSIS) in partnership with the Internal Food Information Council</li>
+</ul>
+<h3>Thermal Processing</h3>
+<p><strong>Use of high temperatures</strong> to destroy enzymes and microorganisms that could reduce quality and/or safety of food</p>
+<h4>1. Blanching</h4>
+<p>A mild heat treatment that primarily destroys enzymes and reduces microbial load (<strong>does not necessarily kill pathogens</strong>), further preservation methods needed to extend shelf life</p>
+<ul>
+<li>Example: <strong>Vegetables-frozen, canned</strong></li>
+</ul>
+<h4>2. Pasteurization</h4>
+<p>A <strong>mild heat treatment</strong> used primarily <strong>to destroy pathogenic organisms</strong> but it also destroys enzymes and reduces microbial load. Requires an addition preservation method to extend shelf life</p>
+<ul>
+<li>
+<p>Example: Refrigeration, drying</p>
+</li>
+<li>
+<p>Used for <strong>milk, liquid eggs, fruit juices, and beer</strong></p>
+</li>
+<li>
+<p>Destroy pathogens</p>
+</li>
+<li>
+<p>Reduce microbial load</p>
+</li>
+<li>
+<p>Inactivate enzymes</p>
+</li>
+<li>
+<p>Extend shelf life</p>
+</li>
+</ul>
+<h4>3. Commercial Sterilization</h4>
+<p>A <strong>severe heat treatment</strong> that destroys pathogenic microorganisms that could spoil food. Extends shelf life, room temperature stable</p>
+<ul>
+<li><strong>Canned foods</strong></li>
+</ul>
+<h4>Canning</h4>
+<ul>
+<li>
+<p>Canning is hermetic sealing</p>
+<ul>
+<li>Hermetic = airtight; no oxygen</li>
+</ul>
+</li>
+<li>
+<p><strong>Food is heated after packaging in canning</strong></p>
+</li>
+<li>
+<p>Severe heat used to inhibit spoilage and pathogenic microorganisms</p>
+</li>
+<li>
+<p>Those microorganisms capable of growth, spoilage under normal handling and storage conditions</p>
+</li>
+<li>
+<p>The product may contain viable spores, but they will not grow under normal conditions</p>
+</li>
+<li>
+<p>Temperature range for canning: <strong>241-250F</strong></p>
+</li>
+<li>
+<p><strong>Main purpose of canning</strong></p>
+<ul>
+<li><strong>Commercial sterility of food products</strong></li>
+<li><strong>Extended shelf life</strong></li>
+</ul>
+</li>
+<li>
+<p><em>Clostridium botulinum</em> spores, may be present in high-acid foods; but, they do not germinate and grow; so, no hazard</p>
+<ul>
+<li><strong>Home canned tomatoes, OK</strong></li>
+<li><strong>Home canned beans, NO</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Canned foods: definitely not a daily dietary staple recommendation, but need not be totally avoided</strong></p>
+</li>
+</ul>
+<h3>Retort Packaging</h3>
+<ul>
+<li><strong>In retort packaging, food is filled into a pouch or flexible metal / plastic foils, and, sealed</strong></li>
+<li>Then heated to extremely high temperatures, rendering the product commercially sterile</li>
+<li>MRE meals in retort pouch</li>
+<li>Juices in retort pouch</li>
+</ul>
+<h3>REPEDS</h3>
+<ul>
+<li>Refrigerated processed foods of extended durability</li>
+<li>Cook-chill product, or sous-vide meals: becoming popular</li>
+<li>Foods are mildly heated within vacuum packs</li>
+<li>Combined with refrigeration, gives a high quality food</li>
+<li>But, spores may be present</li>
+<li>So, FDA requires a second hurdle technology: a preservative - in addition to refrigeration to ensure safety</li>
+</ul>
+<h3>Effects of High Temperature Processing</h3>
+<ul>
+<li>1 example: <strong>acrylamide</strong></li>
+<li>Contaminant during food preparation</li>
+<li>Chemical reactions that occur during high temperature baking and frying, especially in carbohydrate-rich foods</li>
+<li>French fries, snack chips: highest levels seen; could cause cancer and act as a neurotoxin in experimental animals</li>
+<li>Coffee, breakfast cereals, cookies- low levels</li>
+<li><strong>No effects of acrylamide seen in humans so far; under investigation</strong></li>
+</ul>
+<h3>Drying</h3>
+<ul>
+<li>
+<p>Probably the oldest form of food preservation</p>
+</li>
+<li>
+<p>Most widely used</p>
+</li>
+<li>
+<p>Theory: <strong>Reducing the amount of free water</strong> will prevent microbial and chemical spoilage</p>
+</li>
+</ul>
+<p>Advantages of dried foods</p>
+<ol>
+<li>Less costly to produce</li>
+<li>Less costly to store and transport</li>
+</ol>
+<p>Types of drying</p>
+<ol>
+<li>Hot Air Drying</li>
+<li>Drum drying</li>
+</ol>
+<h4>Spray Drying</h4>
+<ul>
+<li>Used only for liquids</li>
+<li>Products: milk, instant tea, and instant coffee</li>
+</ul>
+<h4>Freeze Drying</h4>
+<ul>
+<li><strong>Best nutrient quality</strong></li>
+<li>Best product quality</li>
+<li>Most expensive</li>
+<li>Good control</li>
+</ul>
+<h4>Deep Frying</h4>
+<p><strong>Deep frying is also drying!</strong>
+HOT OIL</p>
+<ul>
+<li>Good heat transfer</li>
+<li>Good control</li>
+<li>Distinctive flavor/aroma</li>
+</ul>
+<h3>Cooling of fruits &#x26; Vegetables</h3>
+<ul>
+<li>
+<p>To preserve pre harvest freshness and flavor; to extend storage and shelf life</p>
+</li>
+<li>
+<p><strong>Cooling at the field before the product is shipped to the market or storage warehouse is referred to as precooling</strong></p>
+</li>
+<li>
+<p><strong>Fruits and vegetables - normally covered with <em>microorganisms</em> that cause decay and premature spoilage under favorable conditions</strong></p>
+</li>
+<li>
+<p>Refrigeration <em>slows down</em></p>
+<ul>
+<li>The chemical and biological processes in foods</li>
+<li>The accompanying deterioration</li>
+<li>Loss of quality and nutrients</li>
+</ul>
+</li>
+<li>
+<p>It also extends the shelf life of products</p>
+</li>
+<li>
+<p><strong>Storage life of fruits and vegetables extended greatly by removing the field heat and cooling as soon after harvesting as possible</strong></p>
+</li>
+<li>
+<p>Precooling, cold storage, and refrigerated transportation have reduced losses considerably and made it possible to move fruits and vegetables to distant markets at neat-fresh conditions</p>
+</li>
+</ul>
+<h3>How is produce frozen?</h3>
+<ol>
+<li><strong>Blanching</strong></li>
+</ol>
+<ul>
+<li>Mild heat treatment</li>
+<li>To inactivate enzymes</li>
+<li>Freezing does not completely stop enzyme action, so blanching is necessary</li>
+<li><strong>Not all bacteria destroyed during blanching. Blanching does not produce a sterile product</strong></li>
+<li>Blanched foods need further preservation treatment, like freezing, to increase shelf life</li>
+</ul>
+<h4>Freezing Fruits</h4>
+<ul>
+<li><strong>Fruits to be frozen are harvested in a fully ripe state and are soft in texture</strong></li>
+<li>Fruits have delicate flavors; easily damaged or changed by heat</li>
+<li>They are best eaten when raw, decrease in quality with processing</li>
+<li>Attractive color is important for frozen fruits</li>
+</ul>
+<h3>Problem with refrigeration and freezing</h3>
+<ul>
+<li>Chilling injury characterized by internal discoloration, soft scald, skin blemishes, soggy breakdown, and failure to ripen.</li>
+<li><strong>Products susceptible to chilling injury must be stored at higher temperatures</strong></li>
+</ul>
+<h2>US vs. EU Eggs</h2>
+<p><strong>Since it is not possible to produce entirely clean eggs, in the US eggs are washed and cleaned to remove stains, dirt, and other surface contaminants to reduce bacterial contamination and prevent the penetration of bacteria into the egg contents, as well as to enhance the appearance to the consumer</strong></p>
+<ul>
+<li>Egg can be contaminated by penetration through the egg shell from the colonized gut or from contaminated feces</li>
+<li>At the end of pasteurization process, eggs are dried, coated with food-grade wax to prevent moisture and microbial penetration</li>
+</ul>
+<h3>Foods that are commonly pasteurized</h3>
+<ul>
+<li>Whole eggs removed from shells and sold as a liquid</li>
+<li>Dried eggs</li>
+<li>Whole eggs pasteurized in the shell</li>
+<li>Ice cream</li>
+</ul>
+<h2>Meats</h2>
+<ul>
+<li>Meat carcasses in slaughterhouses should be cooled as fast as possible to a uniform temperature of about 35F to reduce the growth rate of microorganisms that may be present on carcass surfaces</li>
+<li>Most meats are judged on their tenderness</li>
+<li><strong>Poultry processing plants are completely automated</strong></li>
+</ul>
+<h3>Steam Pasteurization</h3>
+<ul>
+<li>Used on nearly half of U.S. Beef</li>
+<li>This system passes freshly-slaughtered beef carcasses that are already inspected, washed, and trimmed, through a chamber that exposes the beef to pressurized steam for approximately 6 to 8 seconds.</li>
+<li>The steam raises the surface temperature of the carcasses to 190F to 200 F. The carcasses are then cooled with a cold water spray.</li>
+<li>This process has proven to be successful in reducing pathogenic bacteria</li>
+</ul>
+<h3>Whole Muscle Products</h3>
+<ul>
+<li>Whole Ham, whole oven roasted turkey, etc.</li>
+<li>Smoked or non-smoked</li>
+<li><strong>Premium product; from 1 intact muscle portion</strong></li>
+<li>Brine solution injected into the meat</li>
+</ul>
+<h3>Ground Meat Products</h3>
+<ul>
+<li>Fresh breakfast sausage, pepperoni sticks, cured chicken, etc</li>
+<li><strong>Fresh sausages need to be cooked by consumer; pepperoni salami fully cooked by meat processor</strong></li>
+<li>Casings can be of natural origin or artificial</li>
+<li><strong>Natural casings are obtained from animal intestines derived from slaughtering</strong></li>
+<li><strong>Manufactured artificial casings are made of cellulose, collagen, or synthetic materials</strong></li>
+</ul>
+<h3>Spoilage of Fish</h3>
+<ul>
+<li>Fresh fish at 60F remains good for only 1 day, even less</li>
+<li><strong>Fish spoil more quickly than meats</strong></li>
+<li>Bacteria on skin and digestive tract attack all tissues when fish dies</li>
+<li>Fish fat has phospholipids + trimethylamine. Once bacteria acts, trimethylamine splits, giving the characteristic fishy odor</li>
+</ul>
+<h3>How do Nutrients get added to foods?</h3>
+<h4>Encapsulation</h4>
+<ul>
+<li><strong>Micro-encapsulation</strong> coats small particles such as B vitamins, vitamin C, iron, omega-3 fatty acids with a thin, tasteless, edible film masking any bitter taste and off odour.</li>
+<li><strong>Products are enhanced without changing the desired flavor</strong></li>
+</ul></article></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/food-farm-to-table/lecture5and6/";window.___webpackCompilationHash="613784ac1824eb68e6c7";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-195650a4cc7ee0d6ed17.js"],"app":["/app-013735a13a1cac37c6e5.js"],"component---src-pages-markdown-remark-frontmatter-slug-tsx":["/component---src-pages-markdown-remark-frontmatter-slug-tsx-ad0ba1135c55d817ad47.js"]};/*]]>*/</script><script src="/polyfill-195650a4cc7ee0d6ed17.js" nomodule=""></script><script src="/component---src-pages-markdown-remark-frontmatter-slug-tsx-ad0ba1135c55d817ad47.js" async=""></script><script src="/app-013735a13a1cac37c6e5.js" async=""></script><script src="/framework-04b3cf91005a8c093a87.js" async=""></script><script src="/webpack-runtime-83f76986492883e0816a.js" async=""></script></body></html>

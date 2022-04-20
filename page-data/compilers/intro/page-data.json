@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-markdown-remark-frontmatter-slug-tsx",
+    "path": "/compilers/intro/",
+    "result": {"data":{"markdownRemark":{"html":"<h2>Rough Syllabus</h2>\n<ol>\n<li>Overview</li>\n<li>Instruction Scheduling</li>\n<li>Local Register Allocation</li>\n<li>Scanning</li>\n<li>Parsing</li>\n<li>Context Sensitive Analysis</li>\n<li>Inner Workings of Compiled Code</li>\n<li>Introduction to Optimization</li>\n<li>Code Selection</li>\n<li>More Optimization (time permitting)</li>\n</ol>","frontmatter":{"date":"January 19, 2021","slug":"/compilers/intro","title":"Compilers - Intro"}}},"pageContext":{"id":"fbacd002-5468-52a7-ab38-4700d45cce1a","frontmatter__slug":"/compilers/intro","__params":{"frontmatter__slug":"compilers"}}},
+    "staticQueryHashes": ["1727495174"]}
